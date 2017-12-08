@@ -19,17 +19,17 @@ public final class Example {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string hello = 1;</code>
+     * <code>string hello = 1;</code>
      */
     java.lang.String getHello();
     /**
-     * <code>optional string hello = 1;</code>
+     * <code>string hello = 1;</code>
      */
     com.google.protobuf.ByteString
         getHelloBytes();
 
     /**
-     * <code>optional int32 test = 2;</code>
+     * <code>int32 test = 2;</code>
      */
     int getTest();
   }
@@ -40,6 +40,7 @@ public final class Example {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:at.fhj.swengb.protobuf.Helloworld)
       HelloworldOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use Helloworld.newBuilder() to construct.
     private Helloworld(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -52,14 +53,19 @@ public final class Example {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private Helloworld(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -69,7 +75,8 @@ public final class Example {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -93,6 +100,7 @@ public final class Example {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -111,7 +119,7 @@ public final class Example {
     public static final int HELLO_FIELD_NUMBER = 1;
     private volatile java.lang.Object hello_;
     /**
-     * <code>optional string hello = 1;</code>
+     * <code>string hello = 1;</code>
      */
     public java.lang.String getHello() {
       java.lang.Object ref = hello_;
@@ -126,7 +134,7 @@ public final class Example {
       }
     }
     /**
-     * <code>optional string hello = 1;</code>
+     * <code>string hello = 1;</code>
      */
     public com.google.protobuf.ByteString
         getHelloBytes() {
@@ -145,7 +153,7 @@ public final class Example {
     public static final int TEST_FIELD_NUMBER = 2;
     private int test_;
     /**
-     * <code>optional int32 test = 2;</code>
+     * <code>int32 test = 2;</code>
      */
     public int getTest() {
       return test_;
@@ -169,6 +177,7 @@ public final class Example {
       if (test_ != 0) {
         output.writeInt32(2, test_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -183,11 +192,11 @@ public final class Example {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, test_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -203,6 +212,7 @@ public final class Example {
           .equals(other.getHello());
       result = result && (getTest()
           == other.getTest());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -212,7 +222,7 @@ public final class Example {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + HELLO_FIELD_NUMBER;
       hash = (53 * hash) + getHello().hashCode();
       hash = (37 * hash) + TEST_FIELD_NUMBER;
@@ -222,6 +232,17 @@ public final class Example {
       return hash;
     }
 
+    public static at.fhj.swengb.protobuf.Example.Helloworld parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static at.fhj.swengb.protobuf.Example.Helloworld parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static at.fhj.swengb.protobuf.Example.Helloworld parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -372,7 +393,7 @@ public final class Example {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -385,12 +406,12 @@ public final class Example {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -411,6 +432,7 @@ public final class Example {
         if (other.getTest() != 0) {
           setTest(other.getTest());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -439,7 +461,7 @@ public final class Example {
 
       private java.lang.Object hello_ = "";
       /**
-       * <code>optional string hello = 1;</code>
+       * <code>string hello = 1;</code>
        */
       public java.lang.String getHello() {
         java.lang.Object ref = hello_;
@@ -454,7 +476,7 @@ public final class Example {
         }
       }
       /**
-       * <code>optional string hello = 1;</code>
+       * <code>string hello = 1;</code>
        */
       public com.google.protobuf.ByteString
           getHelloBytes() {
@@ -470,7 +492,7 @@ public final class Example {
         }
       }
       /**
-       * <code>optional string hello = 1;</code>
+       * <code>string hello = 1;</code>
        */
       public Builder setHello(
           java.lang.String value) {
@@ -483,7 +505,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>optional string hello = 1;</code>
+       * <code>string hello = 1;</code>
        */
       public Builder clearHello() {
         
@@ -492,7 +514,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>optional string hello = 1;</code>
+       * <code>string hello = 1;</code>
        */
       public Builder setHelloBytes(
           com.google.protobuf.ByteString value) {
@@ -508,13 +530,13 @@ public final class Example {
 
       private int test_ ;
       /**
-       * <code>optional int32 test = 2;</code>
+       * <code>int32 test = 2;</code>
        */
       public int getTest() {
         return test_;
       }
       /**
-       * <code>optional int32 test = 2;</code>
+       * <code>int32 test = 2;</code>
        */
       public Builder setTest(int value) {
         
@@ -523,7 +545,7 @@ public final class Example {
         return this;
       }
       /**
-       * <code>optional int32 test = 2;</code>
+       * <code>int32 test = 2;</code>
        */
       public Builder clearTest() {
         
@@ -533,12 +555,12 @@ public final class Example {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -561,7 +583,7 @@ public final class Example {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Helloworld(input, extensionRegistry);
+        return new Helloworld(input, extensionRegistry);
       }
     };
 

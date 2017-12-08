@@ -14,7 +14,14 @@ object RpnCalculator {
     * @param s a string representing a calculation, for example '1 2 +'
     * @return
     */
-  def apply(s: String): Try[RpnCalculator] = ???
+  def apply(s: String): Try[RpnCalculator] = if (s.isEmpty) Try(RpnCalculator()) else {
+    val stack: List[Op] = s.split(' ').map(e => Op(e)).toList
+    var calc: Try[RpnCalculator] = Try(RpnCalculator())
+    stack.foreach(e => calc = calc.get.push(e))
+    calc
+  }
+
+}
 
 }
 
@@ -32,7 +39,13 @@ case class RpnCalculator(stack: List[Op] = Nil) {
     * @param op
     * @return
     */
-  def push(op: Op): Try[RpnCalculator] = ???
+  def push(op: Op): Try[RpnCalculator] = {
+    if (stack.isEmpty) Try(RpnCalculator())
+    if (op.equals(Val)) {
+      var nstack = stack :+ op
+      Try(RpnCalculator(nstack))
+    }
+
 
   /**
     * Pushes val's on the stack.
