@@ -76,11 +76,15 @@
                     </font>
                 </Button>
                 <Button fx:id="buttonC" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false" onAction="#clickit" text="C"/>
+                        mnemonicParsing="false" onAction="#clickit" text="C">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Button>
                 <Button fx:id="buttonDiv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                         mnemonicParsing="false" onAction="#clickit" text="/" GridPane.columnIndex="1">
                     <font>
-                        <Font name="Verdana" size="25.0"/>
+                        <Font size="25.0"/>
                     </font>
                 </Button>
                 <Button fx:id="buttonMul" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
@@ -92,7 +96,7 @@
                 <Button fx:id="buttonMin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                         mnemonicParsing="false" onAction="#clickit" text="-" GridPane.columnIndex="3">
                     <font>
-                        <Font name="Verdana" size="25.0"/>
+                        <Font size="25.0"/>
                     </font>
                 </Button>
                 <Button fx:id="button7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
@@ -105,14 +109,14 @@
                         mnemonicParsing="false" onAction="#clickit" text="8" GridPane.columnIndex="1"
                         GridPane.rowIndex="1">
                     <font>
-                        <Font name="Vivaldi Italic" size="25.0"/>
+                        <Font size="25.0"/>
                     </font>
                 </Button>
                 <Button fx:id="button9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                         mnemonicParsing="false" onAction="#clickit" text="9" GridPane.columnIndex="2"
                         GridPane.rowIndex="1">
                     <font>
-                        <Font name="Verdana" size="25.0"/>
+                        <Font size="25.0"/>
                     </font>
                 </Button>
                 <Button fx:id="button4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
@@ -125,7 +129,7 @@
                         mnemonicParsing="false" onAction="#clickit" text="5" GridPane.columnIndex="1"
                         GridPane.rowIndex="2">
                     <font>
-                        <Font name="Verdana" size="25.0"/>
+                        <Font size="25.0"/>
                     </font>
                 </Button>
                 <Button fx:id="button6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
@@ -138,7 +142,7 @@
                 <Button fx:id="button1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                         mnemonicParsing="false" onAction="#clickit" text="1" GridPane.rowIndex="3">
                     <font>
-                        <Font name="Verdana" size="25.0"/>
+                        <Font size="25.0"/>
                     </font>
                 </Button>
                 <Button fx:id="button2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
@@ -152,7 +156,7 @@
                         mnemonicParsing="false" onAction="#clickit" text="3" GridPane.columnIndex="2"
                         GridPane.rowIndex="3">
                     <font>
-                        <Font name="Verdana" size="25.0"/>
+                        <Font size="25.0"/>
                     </font>
                 </Button>
                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
@@ -162,7 +166,11 @@
                             <children>
                                 <Button fx:id="buttonEnter" maxHeight="1.7976931348623157E308"
                                         maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickit"
-                                        prefHeight="93.0" prefWidth="300.0" text="Enter"/>
+                                        prefHeight="93.0" prefWidth="300.0" text="Enter">
+                                    <font>
+                                        <Font size="25.0"/>
+                                    </font>
+                                </Button>
                             </children>
                         </FlowPane>
                     </children>
@@ -171,15 +179,27 @@
                     <children>
                         <Button fx:id="buttonKomma" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                                 mnemonicParsing="false" onAction="#clickit" prefHeight="91.0" prefWidth="300.0"
-                                text=","/>
+                                text=",">
+                            <font>
+                                <Font size="25.0"/>
+                            </font>
+                        </Button>
                     </children>
                 </FlowPane>
                 <Button fx:id="button0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                         mnemonicParsing="false" onAction="#clickit" text="0" GridPane.columnIndex="3"
-                        GridPane.rowIndex="3"/>
+                        GridPane.rowIndex="3">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Button>
                 <Button fx:id="buttonPluMin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                         mnemonicParsing="false" onAction="#clickit" text="+/-" GridPane.columnIndex="4"
-                        GridPane.rowIndex="3"/>
+                        GridPane.rowIndex="3">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Button>
             </children>
         </GridPane>
         <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="13"/>

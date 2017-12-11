@@ -8,11 +8,17 @@
 Button {
     -fx-background-color: DeepSkyBlue;
     -fx-border-color: #477887;
+    -fx-text-color: #ffb732;
 
 }
 
 Button:hover {
     -fx-background-color: #ffb732;
+    -fx-border-color:
 
+}
+
+Label {
+    -fx-font-size: 25;
 }
 
