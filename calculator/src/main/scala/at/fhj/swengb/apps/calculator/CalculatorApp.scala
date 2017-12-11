@@ -134,7 +134,7 @@ class CalculatorFxController extends Initializable {
   def sgn(): Unit = {
     getCalculator().push(Op(Label3.getText)) match {
       case Success(c) => setCalculator(c)
-      case Failure(e) => // show warning / error
+      case Failure(e) => e.getMessage
     }
     getCalculator().stack foreach println
   }
