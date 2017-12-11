@@ -7,16 +7,20 @@
 | Hours
 | Description
 
-| 29.11.17
-| 1
-| Review of this and that
+| 8.12.2017
+| 8
+| begin work on calc with Fernbach & Weiland
 
-| 30.11.17
-| 5
-| implemented css
+| 9.12.2017
+| 7
+| implemented css, work on CalculatorApp.scala and FXML
 
-| 11.07.17
+| 10.12.2017
 | 2
-| fixed bugs
+| fix tests, continue design work
+
+| 11.12.2017
+| 5
+| bugfixing and discussing logic with Fernbach & Weiland, finishing touches on css
 
 |===
