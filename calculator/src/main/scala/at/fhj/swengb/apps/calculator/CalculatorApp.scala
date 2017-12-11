@@ -27,7 +27,7 @@ class CalculatorFX extends javafx.application.Application {
 
   override def start(stage: Stage): Unit =
     try {
-      stage.setTitle("Gregoland wuz here")
+      stage.setTitle("@Ardian Qerimi - Calculator")
       setSkin(stage, fxml, css)
       stage.show()
       stage.setMinWidth(stage.getWidth)
@@ -57,7 +57,7 @@ class CalculatorFxController extends Initializable {
   @FXML var Label3: Label = _
   var clearall: Boolean = false
 
-  override def initialize(location: URL, resources: ResourceBundle) = {
+  override def initialize(location: URL, resources: ResourceBundle): Unit = {
 
   }
 
@@ -85,7 +85,7 @@ class CalculatorFxController extends Initializable {
       }
       case "comma" => if (Label3.getText.isEmpty) insertThis("0.") else if (Label3.getText.count(_ == '.') == 0) insertThis(".")
 
-      case "enter" => {
+      case "enter" =>
         if (!Label3.getText.isEmpty) {
           sgn()
           if (true)
@@ -102,8 +102,8 @@ class CalculatorFxController extends Initializable {
         else {
           insertThis("0")
         }
-      }
-      case "clear" => {
+
+      case "clear" =>
         if (clearall) {
           setCalculator(RpnCalculator())
           Label1.setText("")
@@ -115,8 +115,8 @@ class CalculatorFxController extends Initializable {
           Label3.setText("0")
           clearall = true
         }
-      }
-      case "Change" => {
+
+      case "Change" =>
         if (!Label3.getText.isEmpty) {
           if (Label3.getText.head.equals('-'))
             Label3.setText(Label3.getText.tail)
@@ -124,7 +124,7 @@ class CalculatorFxController extends Initializable {
             Label3.setText('-' + Label3.getText)
         }
         else Label3.setText("-")
-      }
+
       case _ =>
         if (Label3.getText.isEmpty) Label3.setText(str)
         else Label3.setText(Label3.getText + str)
